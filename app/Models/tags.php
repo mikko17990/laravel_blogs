@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class tags extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+    protected $guarded = [];
+    public function blog()
+    {
+        return $this->belongsToMany(blog_tag::class);
+    }
 }
