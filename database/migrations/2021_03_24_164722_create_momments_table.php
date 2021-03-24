@@ -15,6 +15,10 @@ class CreateMommentsTable extends Migration
     {
         Schema::create('momments', function (Blueprint $table) {
             $table->id();
+            $table->text('body');
+            $table->integer('reply_id');
+            $table->integer('blog_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
